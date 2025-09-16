@@ -1,0 +1,412 @@
+/* File: src/styles/index.css
+   Student Name: Sadaf Darwish
+   StudentID: 301493791
+   Date: September 14, 2025
+   Purpose: Global styles and layout.
+*/
+
+/* === Reset / Base === */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color: #0f172a;
+  background: #f8fafc;
+}
+
+/* === Layout === */
+.app {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  padding: 1.25rem 0 3rem;
+}
+
+.section {
+  padding: 2rem 0;
+}
+
+/* === Navbar === */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 4vw;
+}
+
+.logo svg polygon {
+  fill: #0ea5e9;
+}
+
+.logo svg text {
+  fill: white;
+}
+
+.logo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.brand {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.nav-right {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: #0f172a;
+  padding: 0.5rem 0.75rem;
+  border-radius: 999px;
+}
+
+.nav-item:hover {
+  background: #f1f5f9;
+}
+
+.nav-item.btn {
+  background: #0ea5e9;
+  color: white;
+}
+
+.nav-item.btn:hover {
+  background: #0284c7;
+}
+
+/* === Hero === */
+.hero {
+  padding: 3rem 0;
+}
+
+h1 {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  margin: 0 0 0.5rem;
+}
+
+.lead {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.mission {
+  margin-top: 0.5rem;
+}
+
+.accent {
+  color: #0ea5e9;
+}
+
+.cta-row {
+  margin-top: 1.25rem;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.btn,
+.btn-outline {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 0.75rem;
+  padding: 0.6rem 1rem;
+  font-weight: 600;
+}
+
+.btn {
+  background: #0ea5e9;
+  color: white;
+  border: 1px solid transparent;
+}
+
+.btn:hover {
+  background: #0284c7;
+}
+
+.btn-outline {
+  border: 1px solid #0ea5e9;
+  color: #0ea5e9;
+}
+
+.btn-outline:hover {
+  background: #e0f2fe;
+}
+
+/* === About === */
+.about-grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (max-width: 840px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.headshot {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  border: 1px solid #e2e8f0;
+}
+
+.about-name {
+  margin-top: 0;
+}
+
+.resume-row {
+  margin-top: 1rem;
+}
+
+/* === Cards / Grid === */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 960px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 1px 0 rgba(15, 23, 42, 0.02);
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.card-body {
+  padding: 0.9rem 1rem 1.1rem;
+}
+
+.card h3 {
+  margin: 0.2rem 0 0.5rem;
+}
+
+/* === Contact === */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+@media (max-width: 960px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.panel {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+@media (max-width: 640px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.field {
+  display: grid;
+  gap: 0.35rem;
+}
+
+input,
+textarea {
+  border: 1px solid #cbd5e1;
+  border-radius: 0.6rem;
+  padding: 0.6rem 0.7rem;
+  font: inherit;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid #93c5fd;
+  border-color: #93c5fd;
+}
+
+/* === Footer === */
+.footer {
+  margin-top: auto;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+.footer-inner {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+.footer a {
+  color: #93c5fd;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* ===== NAVBAR (dark blue) ===== */
+.navbar {
+  background: #0f172a;
+  /* dark navy */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.04) inset;
+}
+
+/* --- Left: logo section --- */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  /* space between image and text */
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 52px;
+  /* adjust size here */
+  width: auto;
+  border-radius: 8px;
+  /* optional: soften corners */
+}
+
+.logo-text {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 0.2px;
+}
+
+/* --- Right: links --- */
+.nav-links {
+  display: flex;
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Default link (idle): white text, no pill */
+.nav-link {
+  display: inline-block;
+  color: #ffffff;
+  background: transparent;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 6px 12px;
+  /* keep hit area consistent */
+  border-radius: 999px;
+  /* pill shape when active */
+  transition: background .2s ease, color .2s ease, box-shadow .2s ease;
+}
+
+/* Hover (not active): subtle text tint */
+.nav-link:hover {
+  color: #38bdf8;
+  /* light blue text */
+}
+
+/* Active page: blue pill with white text */
+.nav-link.active {
+  background: #38bdf8;
+  color: #0b1220;
+  /* readable on light blue; use #fff if you prefer */
+  box-shadow: 0 0 0 1px rgba(56, 189, 248, .25) inset;
+}
+
+/* Optional: focus ring for keyboard users */
+.nav-link:focus-visible {
+  outline: 2px solid #38bdf8;
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+/* --- Responsive niceties --- */
+@media (max-width: 900px) {
+  .logo-img {
+    height: 44px;
+  }
+
+  .logo-text {
+    font-size: 1.1rem;
+  }
+
+  .nav-links {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+}
